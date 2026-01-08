@@ -62,7 +62,7 @@ class DinoV3FeatureExtractor:
     """
     def __init__(self, model_name: str, image_size=512):
         self.model_name = model_name
-        self.model = DINOv3ViTModel.from_pretrained(model_name)
+        self.model = DINOv3ViTModel.from_pretrained('/weights/dinov3-vitl16-pretrain-lvd1689m')
         self.model.eval()
         self.image_size = image_size
         self.transform = transforms.Compose([
